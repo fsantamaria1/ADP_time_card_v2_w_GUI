@@ -11,9 +11,9 @@ from ttkthemes import ThemedTk
 from calendar import isleap
 import os
 
-import Main
+import FileWriterAndTimeCardListCreator
 from Dates import Dates
-from Main import *
+from FileWriterAndTimeCardListCreator import *
 from Response_Filtering import ResponseFilter
 
 # Theme
