@@ -10,7 +10,7 @@ from tkcalendar import *
 from ttkthemes import ThemedTk
 from calendar import isleap
 import os
-
+import time
 import FileWriterAndTimeCardListCreator
 from Dates import Dates
 from FileWriterAndTimeCardListCreator import *
@@ -38,7 +38,7 @@ def main_window():
         # Ex:('700x500')
         calendar_window.resizable(0, 0)
         # Window icon location
-        location = r"berry.ico"
+        location = r"clock.ico"
         # Changes the Tkinter feather icon to berry it icon
         calendar_window.iconbitmap(location)
         now = datetime.datetime.now()
@@ -258,6 +258,9 @@ def main_window():
                         time_card_number += 1
             # Changes pointer back to normal
             not_loading()
+            # Creates a message box
+            messagebox.showinfo(title="Info",
+                                message="Completed")
 
             # print(file_path)
 
@@ -409,7 +412,7 @@ def main_window():
     root.minsize(300, 350)
     root.maxsize(400, 450)
     # Window icon location
-    window_icon_location = r"berry.ico"
+    window_icon_location = r"clock.ico"
     # Changes the Tkinter feather icon to something else
     root.iconbitmap(window_icon_location)
 
