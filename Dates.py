@@ -123,6 +123,7 @@ class Dates:
         return str(self.formatted_date)
 
     def get_list_of_dates(self):
+        """This methos returns a list of dates when two dates are given"""
         self.first_date = self.given_date
         self.last_date = self.second_given_date
         self.list_of_dates = []
