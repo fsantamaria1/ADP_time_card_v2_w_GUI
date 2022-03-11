@@ -93,29 +93,19 @@ class Dates:
             self.monday_list.append(self.current_monday)
         return self.monday_list
 
-    def get_date_yesterday(self):
-        """This method returns yesterday's date. If no date is given, then it subtracts a day from today's date"""
-        self.yesterday = self.given_date - timedelta(days=1)
-        return self.yesterday
-
-    @staticmethod
-    def get_date_yesterday_string():
-        """This method returns yesterday's date. If no date is given, then it subtracts a day from today's date"""
-        yesterday = date.today() - timedelta(days=1)
-        yesterday_string = date.strftime(yesterday, '%Y-%m-%d')
-        return yesterday_string
-
     def get_date_today(self):
         """This method returns today's date"""
         self.today = date.today()
         return self.today
 
-    @staticmethod
-    def get_date_today_string():
-        """This method returns today's date"""
-        today = date.today()
-        today_string = date.strftime(today, '%Y-%m-%d')
-        return today
+    def get_date_yesterday(self):
+        """This method returns yesterday's date. If no date is given, then it subtracts a day from today's date"""
+        self.yesterday = self.given_date - timedelta(days=1)
+        return self.yesterday
+
+    def return_given_date(self):
+        """This method returns the given date as a date object"""
+        return self.given_date
 
     def format_date_str(self, date_to_be_formatted):
         self.date_to_formatted = date_to_be_formatted
@@ -136,3 +126,17 @@ class Dates:
             self.list_of_dates.append(self.date_to_add)
             self.date_to_add += timedelta(days=1)
         return self.list_of_dates
+
+    @staticmethod
+    def get_date_today_string():
+        """This method returns today's date"""
+        today = date.today()
+        today_string = date.strftime(today, '%Y-%m-%d')
+        return today_string
+
+    @staticmethod
+    def get_date_yesterday_string():
+        """This method returns yesterday's date. If no date is given, then it subtracts a day from today's date"""
+        yesterday = date.today() - timedelta(days=1)
+        yesterday_string = date.strftime(yesterday, '%Y-%m-%d')
+        return yesterday_string
